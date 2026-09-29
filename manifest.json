@@ -1,23 +1,26 @@
 {
   "manifest_version": 3,
-  "name": "BigQuery Easy",
+  "name": "Cost Estimator for BigQuery",
   "version": "5.0.1",
-  "description": "BigQuery but better 🚀",
+  "description": "Shows the estimated cost of a BigQuery query next to the RUN button. Port of BigQuery Easy by marshallino16.",
   "icons": {
-      "16": "images/icon_16.png",
-      "48": "images/icon_48.png",
-      "128": "images/icon_128.png"
+    "16": "images/icon_16.png",
+    "48": "images/icon_48.png",
+    "128": "images/icon_128.png"
   },
-  "author": "Anthony Fernandez - marshallino16",
-  "background": {
-    "service_worker": "scripts/background.js"
-  },
-  "permissions": ["scripting"],
+  "author": "Arkhemis",
   "content_scripts": [
     {
       "matches": ["https://console.cloud.google.com/*"],
       "js": ["scripts/content.js"],
       "run_at": "document_idle"
     }
-  ]
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "bigquery-easy-firefox@arkhemis",
+      "strict_min_version": "140.0",
+      "data_collection_permissions": { "required": ["none"] }
+    }
+  }
 }

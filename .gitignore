@@ -1,5 +1,3 @@
-
-.idea/jsLibraryMappings.xml
-.idea/ruff.xml
-.idea/vcs.xml
 .DS_Store
+.idea/
+package.zip

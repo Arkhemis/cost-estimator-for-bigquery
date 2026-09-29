@@ -45,9 +45,9 @@ if (!window.bqCostObserverInitiated) {
             node.nodeValue = `This query will process ${size} ${unit} when run (Estimated Cost: $${cost.toFixed(2)})`;
 
             if (cost < 0.6) {
-                document.querySelector('.cfc-progress-button-resolved .cm-button').innerHTML = `RUN for $${cost.toFixed(2)}`
+                document.querySelector('.cfc-progress-button-resolved .cm-button').textContent = `RUN for $${cost.toFixed(2)}`
             } else {
-                document.querySelector('.cfc-progress-button-resolved .cm-button').innerHTML = `⚠️ RUN for $${cost.toFixed(2)}`
+                document.querySelector('.cfc-progress-button-resolved .cm-button').textContent = `⚠️ RUN for $${cost.toFixed(2)}`
             }
         }
     }
