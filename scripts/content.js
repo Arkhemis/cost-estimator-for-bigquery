@@ -1,4 +1,8 @@
-// content.js
+// -------------------
+//    BigQuery Easy
+// -------------------
+//
+// Auteur : Anthony Fernandez
 
 if (!window.bqCostObserverInitiated) {
     window.bqCostObserverInitiated = true;
@@ -39,6 +43,12 @@ if (!window.bqCostObserverInitiated) {
             const unit = match[2];
             const cost = computeCost(size, unit);
             node.nodeValue = `This query will process ${size} ${unit} when run (Estimated Cost: $${cost.toFixed(2)})`;
+
+            if (cost < 0.6) {
+                document.querySelector('.cfc-progress-button-resolved .cm-button').innerHTML = `RUN for $${cost.toFixed(2)}`
+            } else {
+                document.querySelector('.cfc-progress-button-resolved .cm-button').innerHTML = `⚠️ RUN for $${cost.toFixed(2)}`
+            }
         }
     }
 

@@ -1,18 +1,23 @@
 {
   "manifest_version": 3,
-  "name": "BigQuery Cost Estimator",
-  "version": "1.2",
-  "description": "Estimates BigQuery spend based on processed data",
+  "name": "BigQuery Easy",
+  "version": "5.0.1",
+  "description": "BigQuery but better 🚀",
+  "icons": {
+      "16": "images/icon_16.png",
+      "48": "images/icon_48.png",
+      "128": "images/icon_128.png"
+  },
+  "author": "Anthony Fernandez - marshallino16",
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "scripts/background.js"
   },
   "permissions": ["scripting"],
   "content_scripts": [
     {
       "matches": ["https://console.cloud.google.com/*"],
-      "js": ["content.js"],
+      "js": ["scripts/content.js"],
       "run_at": "document_idle"
     }
-  ],
-  "action": {}
+  ]
 }
