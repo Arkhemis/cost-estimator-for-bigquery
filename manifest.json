@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Cost Estimator for BigQuery",
-  "version": "5.0.1",
+  "version": "5.0.2",
   "description": "Shows the estimated cost of a BigQuery query next to the RUN button. Port of BigQuery Easy by marshallino16.",
   "icons": {
     "16": "images/icon_16.png",
