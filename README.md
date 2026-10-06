@@ -17,7 +17,7 @@ This is an unofficial port. It is not affiliated with Google.
 
 ## Install
 
-Download the signed `.xpi` from the [releases](https://github.com/Arkhemis/cost-estimator-for-bigquery/releases), then open `about:addons` → ⚙️ → *Install Add-on From File…*.
+Install it from [addons.mozilla.org](https://addons.mozilla.org/firefox/addon/cost-estimator-for-bigquery/). Firefox keeps it up to date.
 
 On first use, Firefox may ask you to allow the extension on `console.cloud.google.com` (Manifest V3 host permissions).
 
@@ -27,7 +27,7 @@ On first use, Firefox may ask you to allow the extension on `console.cloud.googl
 make package
 ```
 
-produces `package.zip`, ready to upload to [AMO](https://addons.mozilla.org/developers/) for signing. There is no build step: the files are shipped as-is.
+produces `package.zip`, the archive uploaded to [AMO](https://addons.mozilla.org/developers/) for each release (bump `version` in `manifest.json` first). There is no build step: the files are shipped as-is.
 
 ## Credits
 
